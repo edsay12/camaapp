@@ -5,7 +5,8 @@ export const homeContainer = styled.div`
   display: flex;
   justify-content: end;
 
-  img{
+  img {
+    width: 100%;
     max-width: 900px;
   }
 `;
