@@ -15,4 +15,5 @@ export const anuncio = styled.div`
   width: 100vw;
   height: 100%;
   background-color: red;
+  margin-top: 20px;
 `;
