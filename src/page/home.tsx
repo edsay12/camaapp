@@ -4,37 +4,16 @@ import { useEffect } from "react";
 
 function Home() {
   useEffect(() => {
-    const pushAd = () => {
-      try {
-        const adsbygoogle = window.adsbygoogle
-        console.log({ adsbygoogle })
-        adsbygoogle.push({})
-      } catch (e) {
-        console.error(e)
-      }
-    }
-
-    const interval = setInterval(() => {
-      // Check if Adsense script is loaded every 300ms
-      if (window.adsbygoogle) {
-        pushAd()
-        // clear the interval once the ad is pushed so that function isn't called indefinitely
-        clearInterval(interval)
-      }
-    }, 300)
-
-    return () => {
-      clearInterval(interval)
-    }
-  }, [])
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-expect-error
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }, []);
   return (
     <>
       <S.homeContainer>
         <img src={img} alt="Foto de uma cama" />
       </S.homeContainer>
       <S.anuncio>
-        
-
         <ins
           className="adsbygoogle"
           style={{ display: "block" }}
@@ -44,7 +23,6 @@ function Home() {
           data-ad-format="auto"
           data-full-width-responsive="true"
         ></ins>
-       
       </S.anuncio>
     </>
   );
