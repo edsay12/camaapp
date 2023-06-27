@@ -19,7 +19,6 @@ function Home() {
           style={{ display: "block" }}
           data-ad-client="ca-pub-8231164361310670"
           data-ad-slot="5719652690"
-          data-adtest="'on"
           data-ad-format="auto"
           data-full-width-responsive="true"
         ></ins>
